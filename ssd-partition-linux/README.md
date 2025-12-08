@@ -1,5 +1,7 @@
 ## Split SSD: small OS + big /data
 
+A very good guide can be found [here](https://linuxconfig.org/how-to-partition-a-drive-on-linux).
+
 Goal: keep / (root) ~100 GB for the OS, and use the rest as /data. <br />
 Because our current root is on the SSD, we can’t shrink it while mounted. 
 The easiest way is to boot temporarily from another device, then modify the SSD offline.

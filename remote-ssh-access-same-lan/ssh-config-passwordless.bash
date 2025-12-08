@@ -19,15 +19,14 @@ ssh -i ~/.ssh/id_ed25519 user@192.168.x.x
 # 4) Make it convenient (Mac client config)
 Create/edit ~/.ssh/config on your Mac:
 Host xubuntu
-  HostName 192.168.x.x
-  User user
-  IdentityFile ~/.ssh/id_ed25519
+  HostName [192.168.x.x]
+  User [user]
+  IdentityFile ~/.ssh/id_ed25519_xx
   IdentitiesOnly yes
   AddKeysToAgent yes
   UseKeychain yes
   ServerAliveInterval 30
   ForwardAgent no
-
 # Now you can just: ssh xubuntu
 
 # the same can be applied on the Linux machine to have a passwordless ssh connection from
@@ -49,6 +48,7 @@ ssh-add ~/.ssh/id_ed25519
 # (Optionally restrict to your user account.)
 # If you use the macOS firewall, make sure Remote Login is allowed. CLI alternative on the Mac:
 
+# on Mac
 sudo systemsetup -setremotelogin on
 # If needed, (re)start the daemon:
 sudo launchctl kickstart -k system/com.openssh.sshd
