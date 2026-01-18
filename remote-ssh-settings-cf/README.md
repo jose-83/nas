@@ -42,16 +42,17 @@ cloudflared --version
 ## One-liner connect OR nice SSH config
 ```bash
 ssh -o ProxyCommand="cloudflared access ssh --hostname ssh.yourdomain.com" user@ssh.yourdomain.com
+ssh -o ProxyCommand="cloudflared access ssh --hostname tunnel.sabri.life" pi5@tunnel.sabri.life
 ```
 Nice ~/.ssh/config:
 ```bash
-Host my-nas
-  HostName weg.sabri.life
-  User hossein
+Host nas
+  HostName tunnel.sabri.life
+  User pi5
   ProxyCommand cloudflared access ssh --hostname %h
 ```
 Then,
 ```bash
-ssh my-nas
+ssh nas
 ```
 
