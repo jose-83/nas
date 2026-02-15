@@ -11,3 +11,8 @@ Also, prepare /data for apps/media/backup:
 sudo mkdir -p /data/{apps,media,backup}
 sudo chown -R "$USER:$USER" /data
 ```
+
+Shows all running services:
+```bash
+systemctl list-units --type=service --state=running
+```
