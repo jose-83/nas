@@ -1,14 +1,3 @@
-## Borg installation and setup
-To install on Linux Debian/Ubuntu:
-```bash
-apt install borgbackup
-BACKUP_PATH=/path/to/backup/folder
-mkdir -p "$BACKUP_PATH" "$BACKUP_PATH/database-backup"
-
-# Initialize LOCAL Borg repo (unencrypted, as in Immich docs)
-borg init --encryption=none "$BACKUP_PATH/immich-borg"
-```
-
 ## Tailscale installation
 ```bash
 sudo apt install curl
@@ -30,6 +19,8 @@ sudo tailscale down
 sudo systemctl stop tailscaled
 # Stops it from auto-starting on boot
 sudo systemctl disable tailscaled
+# Start Tailscale
+sudo tailscale up
 ```
 
 ## Prepare SSH access from Pi 5 → mini-PC (for Borg over SSH)
@@ -46,4 +37,15 @@ ssh-copy-id hossein@MINIPC_HOSTNAME_OR_IP
 Test:
 ```bash
 ssh hossein@MINIPC_HOSTNAME_OR_IP "echo ok"
+```
+
+## Borg installation and setup
+To install on Linux Debian/Ubuntu:
+```bash
+apt install borgbackup
+BACKUP_PATH=/path/to/backup/folder
+mkdir -p "$BACKUP_PATH" "$BACKUP_PATH/database-backup"
+
+# Initialize LOCAL Borg repo (unencrypted, as in Immich docs)
+borg init --encryption=none "$BACKUP_PATH/immich-borg"
 ```
