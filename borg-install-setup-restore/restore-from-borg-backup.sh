@@ -1,4 +1,4 @@
-# Go to immich-borg folder where you have config file nad data folder
+# Go to immich-borg folder where you have config file and data folder
 export BORG_REPO="/path/to/immich-borg"   # folder that contains config + data/
 borg list "$BORG_REPO" # list of snapshots
 borg info "$BORG_REPO::sabri-2025-09-12T23:53:57" # info about each snapshot
