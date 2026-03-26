@@ -8,7 +8,7 @@ export BORG_PASSPHRASE=$(sudo cat /root/.config/borg/passphrase)
 UPLOAD_LOCATION="/data/media/photos/library"
 
 # Local Borg repo on Pi5
-LOCAL_REPO_DIR="/home/pi5/immich-backups/immich-borg"
+LOCAL_REPO_DIR="/hdd12tb/borg"
 
 # Local working area on Pi5
 LOCAL_BACKUP_ROOT="/home/pi5/immich-backups"
