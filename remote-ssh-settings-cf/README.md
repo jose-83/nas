@@ -43,6 +43,7 @@ cloudflared --version
 ```bash
 ssh -o ProxyCommand="cloudflared access ssh --hostname ssh.yourdomain.com" user@ssh.yourdomain.com
 ssh -o ProxyCommand="cloudflared access ssh --hostname tunnel.sabri.life" pi5@tunnel.sabri.life
+ssh -o ProxyCommand="cloudflared access ssh --hostname weg.sabri.life" hossein@weg.sabri.life
 ```
 Nice ~/.ssh/config:
 ```bash
