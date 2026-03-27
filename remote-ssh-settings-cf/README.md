@@ -31,12 +31,7 @@ cloudflared --version
 Linux (Debian/Ubuntu):
 ```bash
 sudo apt update
-sudo apt install cloudflared -y || {
-  curl -fsSL https://packages.cloudflare.com/gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
-  echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://packages.cloudflare.com/cloudflared $(. /etc/os-release && echo $VERSION_CODENAME) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
-  sudo apt update && sudo apt install cloudflared -y
-}
-cloudflared --version
+# check here: https://pkg.cloudflare.com/index.html
 ```
 
 ## One-liner connect OR nice SSH config
